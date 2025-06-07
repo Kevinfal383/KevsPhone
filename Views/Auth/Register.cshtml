@@ -3,77 +3,106 @@
     ViewData["Title"] = "Inscription";
 }
 
-<div class="row justify-content-center">
-    <div class="col-md-8">
-        <h1 class="text-center">@ViewData["Title"]</h1>
-        <form asp-action="Register" method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="form-group mb-3">
-                        <label asp-for="Nom" class="control-label"></label>
-                        <input asp-for="Nom" class="form-control" />
-                        <span asp-validation-for="Nom" class="text-danger"></span>
-                    </div>
+<div class="row justify-content-center py-5">
+    <div class="col-md-8 col-lg-7">
+        <div class="card shadow-sm border-0 rounded-3">
+            <div class="card-body p-5">
+                <div class="text-center mb-4">
+                    <h2 class="fw-bold">@ViewData["Title"]</h2>
+                    <p class="text-muted">Créez votre compte en quelques étapes</p>
                 </div>
-                <div class="col-md-6">
-                    <div class="form-group mb-3">
-                        <label asp-for="Prenom" class="control-label"></label>
-                        <input asp-for="Prenom" class="form-control" />
-                        <span asp-validation-for="Prenom" class="text-danger"></span>
+                
+                <form asp-action="Register" method="post">
+                    <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+                    
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-6">
+                            <label asp-for="Nom" class="form-label fw-semibold"></label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light"><i class="bi bi-person"></i></span>
+                                <input asp-for="Nom" class="form-control py-2" placeholder="Votre nom" />
+                            </div>
+                            <span asp-validation-for="Nom" class="text-danger small"></span>
+                        </div>
+                        <div class="col-md-6">
+                            <label asp-for="Prenom" class="form-label fw-semibold"></label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light"><i class="bi bi-person"></i></span>
+                                <input asp-for="Prenom" class="form-control py-2" placeholder="Votre prénom" />
+                            </div>
+                            <span asp-validation-for="Prenom" class="text-danger small"></span>
+                        </div>
                     </div>
-                </div>
-            </div>
-            
-            <div class="form-group mb-3">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            
-            <div class="form-group mb-3">
-                <label asp-for="DateNaissance" class="control-label"></label>
-                <input asp-for="DateNaissance" type="date" class="form-control" />
-                <span asp-validation-for="DateNaissance" class="text-danger"></span>
-            </div>
-            
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="form-group mb-3">
-                        <label asp-for="Ville" class="control-label"></label>
-                        <input asp-for="Ville" class="form-control" />
-                        <span asp-validation-for="Ville" class="text-danger"></span>
+                    
+                    <div class="mb-4">
+                        <label asp-for="Email" class="form-label fw-semibold"></label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light"><i class="bi bi-envelope"></i></span>
+                            <input asp-for="Email" class="form-control py-2" placeholder="exemple@email.com" />
+                        </div>
+                        <span asp-validation-for="Email" class="text-danger small"></span>
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group mb-3">
-                        <label asp-for="Pays" class="control-label"></label>
-                        <input asp-for="Pays" class="form-control" />
-                        <span asp-validation-for="Pays" class="text-danger"></span>
+                    
+                    <div class="mb-4">
+                        <label asp-for="DateNaissance" class="form-label fw-semibold"></label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light"><i class="bi bi-calendar"></i></span>
+                            <input asp-for="DateNaissance" type="date" class="form-control py-2" />
+                        </div>
+                        <span asp-validation-for="DateNaissance" class="text-danger small"></span>
                     </div>
-                </div>
+                    
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-6">
+                            <label asp-for="Ville" class="form-label fw-semibold"></label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light"><i class="bi bi-geo-alt"></i></span>
+                                <input asp-for="Ville" class="form-control py-2" placeholder="Votre ville" />
+                            </div>
+                            <span asp-validation-for="Ville" class="text-danger small"></span>
+                        </div>
+                        <div class="col-md-6">
+                            <label asp-for="Pays" class="form-label fw-semibold"></label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light"><i class="bi bi-globe"></i></span>
+                                <input asp-for="Pays" class="form-control py-2" placeholder="Votre pays" />
+                            </div>
+                            <span asp-validation-for="Pays" class="text-danger small"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label asp-for="MotDePasse" class="form-label fw-semibold"></label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light"><i class="bi bi-lock"></i></span>
+                            <input asp-for="MotDePasse" type="password" class="form-control py-2" placeholder="••••••••" />
+                        </div>
+                        <span asp-validation-for="MotDePasse" class="text-danger small"></span>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label asp-for="ConfirmerMotDePasse" class="form-label fw-semibold"></label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light"><i class="bi bi-lock"></i></span>
+                            <input asp-for="ConfirmerMotDePasse" type="password" class="form-control py-2" placeholder="••••••••" />
+                        </div>
+                        <span asp-validation-for="ConfirmerMotDePasse" class="text-danger small"></span>
+                    </div>
+                    
+                    <div class="d-grid mb-3">
+                        <button type="submit" class="btn btn-primary py-2 fw-semibold">
+                            <i class="bi bi-person-plus me-2"></i>S'inscrire
+                        </button>
+                    </div>
+                    
+                    <div class="text-center pt-3">
+                        <p class="text-muted">Déjà un compte ? 
+                            <a asp-action="Login" class="text-decoration-none fw-semibold">Se connecter</a>
+                        </p>
+                    </div>
+                </form>
             </div>
-            
-            <div class="form-group mb-3">
-                <label asp-for="MotDePasse" class="control-label"></label>
-                <input asp-for="MotDePasse" type="password" class="form-control" />
-                <span asp-validation-for="MotDePasse" class="text-danger"></span>
-            </div>
-            
-            <div class="form-group mb-3">
-                <label asp-for="ConfirmerMotDePasse" class="control-label"></label>
-                <input asp-for="ConfirmerMotDePasse" type="password" class="form-control" />
-                <span asp-validation-for="ConfirmerMotDePasse" class="text-danger"></span>
-            </div>
-            
-            <div class="form-group mb-3">
-                <button type="submit" class="btn btn-primary w-100">S'inscrire</button>
-            </div>
-            
-            <div class="text-center">
-                <p>Déjà un compte ? <a asp-action="Login">Se connecter</a></p>
-            </div>
-        </form>
+        </div>
     </div>
 </div>
+

@@ -3,31 +3,50 @@
     ViewData["Title"] = "Connexion";
 }
 
-<div class="row justify-content-center">
-    <div class="col-md-6">
-        <h1 class="text-center">@ViewData["Title"]</h1>
-        <form asp-action="Login" method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            
-            <div class="form-group mb-3">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
+<div class="row justify-content-center py-5">
+    <div class="col-md-6 col-lg-5">
+        <div class="card shadow-sm border-0 rounded-3">
+            <div class="card-body p-5">
+                <div class="text-center mb-4">
+                    <h2 class="fw-bold">@ViewData["Title"]</h2>
+                    <p class="text-muted">Connectez-vous à votre compte</p>
+                </div>
+                
+                <form asp-action="Login" method="post">
+                    <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+                    
+                    <div class="mb-4">
+                        <label asp-for="Email" class="form-label fw-semibold"></label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light"><i class="bi bi-envelope"></i></span>
+                            <input asp-for="Email" class="form-control py-2" placeholder="exemple@email.com" />
+                        </div>
+                        <span asp-validation-for="Email" class="text-danger small"></span>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label asp-for="MotDePasse" class="form-label fw-semibold"></label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light"><i class="bi bi-lock"></i></span>
+                            <input asp-for="MotDePasse" type="password" class="form-control py-2" placeholder="••••••••" />
+                        </div>
+                        <span asp-validation-for="MotDePasse" class="text-danger small"></span>
+                    </div>
+                    
+                    <div class="d-grid mb-3">
+                        <button type="submit" class="btn btn-primary py-2 fw-semibold">
+                            <i class="bi bi-box-arrow-in-right me-2"></i>Se connecter
+                        </button>
+                    </div>
+                    
+                    <div class="text-center pt-3">
+                        <p class="text-muted">Pas encore de compte ? 
+                            <a asp-action="Register" class="text-decoration-none fw-semibold">S'inscrire</a>
+                        </p>
+                    </div>
+                </form>
             </div>
-            
-            <div class="form-group mb-3">
-                <label asp-for="MotDePasse" class="control-label"></label>
-                <input asp-for="MotDePasse" type="password" class="form-control" />
-                <span asp-validation-for="MotDePasse" class="text-danger"></span>
-            </div>
-            
-            <div class="form-group mb-3">
-                <button type="submit" class="btn btn-primary w-100">Se connecter</button>
-            </div>
-            
-            <div class="text-center">
-                <p>Pas encore de compte ? <a asp-action="Register">S'inscrire</a></p>
-            </div>
-        </form>
+        </div>
     </div>
 </div>
+

@@ -3,8 +3,11 @@
     ViewData["Title"] = "Mes commandes";
 }
 
+<link rel="stylesheet" href="~/css/myOrders.css" />
+
 <div class="container">
     <h2>@ViewData["Title"]</h2>
+    <hr>
     
     @if (Model.Any())
     {
@@ -41,7 +44,7 @@
     else
     {
         <div class="alert alert-info">
-            Vous n'avez pas encore passé de commande.
+            <i class="bi bi-info-circle"></i> Vous n'avez pas encore passé de commande.
         </div>
     }
     

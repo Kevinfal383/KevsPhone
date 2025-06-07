@@ -169,3 +169,10 @@
 /home/kevinfal/PROJETS/Dotnet/KevinfalsPhone/obj/Debug/net9.0/KevinfalsPhone.genruntimeconfig.cache
 /home/kevinfal/PROJETS/Dotnet/KevinfalsPhone/obj/Debug/net9.0/ref/KevinfalsPhone.dll
 /home/kevinfal/PROJETS/Dotnet/KevinfalsPhone/obj/Debug/net9.0/compressed/9enl8d549c-5ipweew5fc.gz
+/home/kevinfal/PROJETS/Dotnet/KevinfalsPhone/obj/Debug/net9.0/KevinfalsPhone.sourcelink.json
+/home/kevinfal/PROJETS/Dotnet/KevinfalsPhone/obj/Debug/net9.0/compressed/wbiqw1drbj-fol2owfdfi.gz
+/home/kevinfal/PROJETS/Dotnet/KevinfalsPhone/obj/Debug/net9.0/compressed/l09hdwdw71-075lyqbmwp.gz
+/home/kevinfal/PROJETS/Dotnet/KevinfalsPhone/obj/Debug/net9.0/compressed/00mc0r4ucx-5486or2zpe.gz
+/home/kevinfal/PROJETS/Dotnet/KevinfalsPhone/obj/Debug/net9.0/compressed/bduivpne4n-a8qprwlxyk.gz
+/home/kevinfal/PROJETS/Dotnet/KevinfalsPhone/obj/Debug/net9.0/compressed/yphbt082jp-39pkaja062.gz
+/home/kevinfal/PROJETS/Dotnet/KevinfalsPhone/obj/Debug/net9.0/compressed/2t79mfcdl5-wbzus48pmk.gz
