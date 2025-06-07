@@ -1,0 +1,65 @@
+@model IEnumerable<Product>
+@{
+    ViewData["Title"] = "Nos produits";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5>Catégories</h5>
+                </div>
+                <div class="list-group list-group-flush">
+                    <a asp-action="Index" class="list-group-item list-group-item-action @(ViewBag.SelectedCategory == null ? "active" : "")">
+                        Tous les produits
+                    </a>
+                    @foreach (var category in ViewBag.Categories)
+                    {
+                        <a asp-action="Index" asp-route-categoryId="@category.Id" 
+                           class="list-group-item list-group-item-action @(ViewBag.SelectedCategory?.Id == category.Id ? "active" : "")">
+                            @category.Nom
+                        </a>
+                    }
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-9">
+            <h2>@ViewData["Title"]</h2>
+            
+            @if (ViewBag.SelectedCategory != null)
+            {
+                <h4>Catégorie : @ViewBag.SelectedCategory.Nom</h4>
+            }
+            
+            <div class="row">
+                @foreach (var product in Model)
+                {
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="~/images/products/@product.Image" class="card-img-top" alt="@product.Nom" style="height: 200px; object-fit: contain;">
+                            <div class="card-body">
+                                <h5 class="card-title">@product.Nom</h5>
+                                <p class="card-text">@product.Description.Substring(0, Math.Min(product.Description.Length, 100))...</p>
+                                <p class="text-success fw-bold">@product.Prix.ToString("C")</p>
+                                <p class="text-muted">Stock: @product.Stock</p>
+                            </div>
+                            <div class="card-footer bg-transparent">
+                                <div class="d-flex justify-content-between">
+                                    <a asp-action="Details" asp-route-id="@product.Id" class="btn btn-sm btn-outline-primary">Détails</a>
+                                    <form asp-controller="Cart" asp-action="AddToCart" method="post">
+                                        <input type="hidden" name="productId" value="@product.Id" />
+                                        <button type="submit" class="btn btn-sm btn-success" @(product.Stock <= 0 ? "disabled" : "")>
+                                            <i class="bi bi-cart-plus"></i> Ajouter
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

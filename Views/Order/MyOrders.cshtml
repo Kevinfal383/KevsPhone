@@ -1,0 +1,51 @@
+@model IEnumerable<Order>
+@{
+    ViewData["Title"] = "Mes commandes";
+}
+
+<div class="container">
+    <h2>@ViewData["Title"]</h2>
+    
+    @if (Model.Any())
+    {
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Numéro de commande</th>
+                        <th>Date</th>
+                        <th>Nombre de produits</th>
+                        <th>Total</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var order in Model)
+                    {
+                        <tr>
+                            <td>@order.NumeroFacture</td>
+                            <td>@order.DateCommande.ToString("dd/MM/yyyy")</td>
+                            <td>@order.NombreProduits</td>
+                            <td>@order.PrixTotal.ToString("C")</td>
+                            <td>
+                                <a asp-action="OrderDetails" asp-route-id="@order.Id" class="btn btn-sm btn-outline-primary">
+                                    <i class="bi bi-eye"></i> Détails
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-info">
+            Vous n'avez pas encore passé de commande.
+        </div>
+    }
+    
+    <a asp-controller="Product" asp-action="Index" class="btn btn-outline-secondary">
+        <i class="bi bi-arrow-left"></i> Retour aux produits
+    </a>
+</div>

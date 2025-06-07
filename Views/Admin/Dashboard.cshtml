@@ -1,0 +1,50 @@
+@{
+    ViewData["Title"] = "Tableau de bord";
+    Layout = "_AdminLayout";
+}
+
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">@ViewData["Title"]</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-3 mb-4">
+        <div class="card text-white bg-primary">
+            <div class="card-body">
+                <h5 class="card-title">Utilisateurs</h5>
+                <p class="card-text display-6">@ViewBag.TotalUsers</p>
+                <a asp-action="Users" class="text-white">Voir détails</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-3 mb-4">
+        <div class="card text-white bg-success">
+            <div class="card-body">
+                <h5 class="card-title">Produits</h5>
+                <p class="card-text display-6">@ViewBag.TotalProducts</p>
+                <a asp-action="Products" class="text-white">Voir détails</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-3 mb-4">
+        <div class="card text-white bg-info">
+            <div class="card-body">
+                <h5 class="card-title">Commandes</h5>
+                <p class="card-text display-6">@ViewBag.TotalOrders</p>
+                <a asp-action="Orders" class="text-white">Voir détails</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-3 mb-4">
+        <div class="card text-white bg-warning">
+            <div class="card-body">
+                <h5 class="card-title">Revenu total</h5>
+                <p class="card-text display-6">@(((decimal)ViewBag.TotalRevenue).ToString("C"))</p>
+                <a asp-action="Orders" class="text-white">Voir détails</a>
+            </div>
+        </div>
+    </div>
+</div>
