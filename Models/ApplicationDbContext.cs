@@ -47,7 +47,7 @@ namespace KevinfalsPhone.Models
                     DateNaissance = new DateTime(1990, 1, 1),
                     Ville = "Antananarivo",
                     Pays = "Madagasikara",
-                    MotDePasse = "$2a$11$2ZQJNv3UuV7QeD5VYsQZP.HRlz7Lk9JZ8bW6f3Jd1TkO9X2vY1WXK", // Admin123!
+                    MotDePasse = "jZae727K08KaOmKSgOaGzww/XVqGr/PKEgIMkjrcbJI=", // 123456
                     Role = "Admin",
                     DateCreation = DateTime.Now
                 }
