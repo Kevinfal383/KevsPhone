@@ -15,7 +15,6 @@ namespace KevinfalsPhone.Services
                 
                 document.Open();
 
-                // En-tête
                 var titleFont = FontFactory.GetFont("Arial", 18, Font.BOLD);
                 var headerFont = FontFactory.GetFont("Arial", 12, Font.BOLD);
                 var normalFont = FontFactory.GetFont("Arial", 10, Font.NORMAL);
@@ -25,27 +24,23 @@ namespace KevinfalsPhone.Services
                 document.Add(new Paragraph($"Date: {order.DateCommande:dd/MM/yyyy}", normalFont));
                 document.Add(new Paragraph(" "));
 
-                // Informations client
                 document.Add(new Paragraph("INFORMATIONS CLIENT", headerFont));
                 document.Add(new Paragraph($"Nom: {user.Prenom} {user.Nom}", normalFont));
                 document.Add(new Paragraph($"Email: {user.Email}", normalFont));
                 document.Add(new Paragraph($"Adresse de livraison: {order.AdresseLivraison}", normalFont));
                 document.Add(new Paragraph(" "));
 
-                // Tableau des produits
                 document.Add(new Paragraph("DÉTAIL DE LA COMMANDE", headerFont));
                 var table = new PdfPTable(5);
                 table.WidthPercentage = 100;
                 table.SetWidths(new float[] { 3, 1, 2, 1, 2 });
 
-                // En-têtes du tableau
                 table.AddCell(new PdfPCell(new Phrase("Produit", headerFont)));
                 table.AddCell(new PdfPCell(new Phrase("Qté", headerFont)));
                 table.AddCell(new PdfPCell(new Phrase("Prix Unit.", headerFont)));
                 table.AddCell(new PdfPCell(new Phrase("Catégorie", headerFont)));
                 table.AddCell(new PdfPCell(new Phrase("Total", headerFont)));
 
-                // Lignes des produits
                 foreach (var item in cartItems)
                 {
                     table.AddCell(new PdfPCell(new Phrase(item.ProductName, normalFont)));

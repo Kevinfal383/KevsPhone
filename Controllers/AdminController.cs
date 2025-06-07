@@ -39,7 +39,6 @@ namespace KevinfalsPhone.Controllers
             return View();
         }
 
-        // Gestion des utilisateurs
         public async Task<IActionResult> Users()
         {
             if (!IsAdmin()) return RedirectToAction("Login", "Auth");
@@ -102,7 +101,6 @@ namespace KevinfalsPhone.Controllers
                 var existingUser = await _context.Users.FindAsync(user.Id);
                 if (existingUser == null) return NotFound();
 
-                // Vérifier l'email unique sauf pour l'utilisateur actuel
                 if (await _context.Users.AnyAsync(u => u.Email == user.Email && u.Id != user.Id))
                 {
                     ModelState.AddModelError("Email", "Cet email est déjà utilisé.");
@@ -141,7 +139,6 @@ namespace KevinfalsPhone.Controllers
             return RedirectToAction("Users");
         }
 
-        // Gestion des produits
         public async Task<IActionResult> Products()
         {
             if (!IsAdmin()) return RedirectToAction("Login", "Auth");
@@ -166,7 +163,6 @@ namespace KevinfalsPhone.Controllers
 
             if (ModelState.IsValid)
             {
-                // Gestion de l'upload d'image
                 if (imageFile != null && imageFile.Length > 0)
                 {
                     var fileName = Guid.NewGuid() + Path.GetExtension(imageFile.FileName);
@@ -219,10 +215,8 @@ namespace KevinfalsPhone.Controllers
                 var existingProduct = await _context.Products.FindAsync(product.Id);
                 if (existingProduct == null) return NotFound();
 
-                // Gestion de l'upload d'image
                 if (imageFile != null && imageFile.Length > 0)
                 {
-                    // Supprimer l'ancienne image
                     if (!string.IsNullOrEmpty(existingProduct.Image))
                     {
                         var oldImagePath = Path.Combine(_webHostEnvironment.WebRootPath, "images", "products", existingProduct.Image);
@@ -271,7 +265,6 @@ namespace KevinfalsPhone.Controllers
             var product = await _context.Products.FindAsync(id);
             if (product != null)
             {
-                // Supprimer l'image
                 if (!string.IsNullOrEmpty(product.Image))
                 {
                     var imagePath = Path.Combine(_webHostEnvironment.WebRootPath, "images", "products", product.Image);
@@ -289,7 +282,6 @@ namespace KevinfalsPhone.Controllers
             return RedirectToAction("Products");
         }
 
-        // Gestion des commandes
         public async Task<IActionResult> Orders()
         {
             if (!IsAdmin()) return RedirectToAction("Login", "Auth");

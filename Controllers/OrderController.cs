@@ -20,7 +20,6 @@ namespace KevinfalsPhone.Controllers
         [HttpGet]
         public IActionResult Checkout()
         {
-            // Vérifier si l'utilisateur est connecté
             if (string.IsNullOrEmpty(HttpContext.Session.GetString("UserId")))
             {
                 return RedirectToAction("Login", "Auth");
@@ -60,7 +59,6 @@ namespace KevinfalsPhone.Controllers
                 return RedirectToAction("Checkout");
             }
 
-            // Vérifier le stock des produits
             foreach (var cartItem in cartItems)
             {
                 var product = await _context.Products.FindAsync(cartItem.ProductId);
@@ -71,7 +69,6 @@ namespace KevinfalsPhone.Controllers
                 }
             }
 
-            // Créer la commande
             var order = new Order
             {
                 UserId = userId,
@@ -85,7 +82,6 @@ namespace KevinfalsPhone.Controllers
             _context.Orders.Add(order);
             await _context.SaveChangesAsync();
 
-            // Créer les éléments de commande et mettre à jour le stock
             foreach (var cartItem in cartItems)
             {
                 var orderItem = new OrderItem
@@ -98,7 +94,6 @@ namespace KevinfalsPhone.Controllers
 
                 _context.OrderItems.Add(orderItem);
 
-                // Mettre à jour le stock
                 var product = await _context.Products.FindAsync(cartItem.ProductId);
                 if (product != null)
                 {
@@ -108,20 +103,16 @@ namespace KevinfalsPhone.Controllers
 
             await _context.SaveChangesAsync();
 
-            // Générer et télécharger la facture PDF
             var user = await _context.Users.FindAsync(userId);
             
-            // Correction de l'avertissement CS8604
             if (user != null)
             {
                 var pdfBytes = _pdfService.GenerateInvoicePdf(order, cartItems, user);
                 
-                // Vider le panier
                 HttpContext.Session.Remove("Cart");
 
                 TempData["Success"] = "Commande validée avec succès !";
 
-                // Retourner le PDF
                 return File(pdfBytes, "application/pdf", $"Facture_{order.NumeroFacture}.pdf");
             }
             else

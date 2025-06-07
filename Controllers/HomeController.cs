@@ -15,13 +15,11 @@ namespace KevinfalsPhone.Controllers
 
         public IActionResult Index()
         {
-            // Vérifier si l'utilisateur est connecté
             var userId = HttpContext.Session.GetString("UserId");
             var userRole = HttpContext.Session.GetString("UserRole");
 
             if (!string.IsNullOrEmpty(userId))
             {
-                // Rediriger vers la liste des produits si connecté
                 return RedirectToAction("Index", "Product");
             }
 

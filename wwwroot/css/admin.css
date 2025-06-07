@@ -1,4 +1,3 @@
-/* Style général du body */
 body {
     background-color: #f8f9fa;
     font-family: 'Poppins', sans-serif;
@@ -6,7 +5,6 @@ body {
     line-height: 1.6;
 }
 
-/* Sidebar */
 #sidebarMenu {
     min-height: 100vh;
     background: linear-gradient(180deg, #2c3e50 0%, #1a252f 100%) !important;
@@ -40,14 +38,12 @@ body {
     text-align: center;
 }
 
-/* Main content */
 main {
     background-color: #f5f7fa;
     padding: 2rem;
     min-height: 100vh;
 }
 
-/* Top bar */
 .d-flex.justify-content-between {
     padding: 1rem 0;
     margin-bottom: 1.5rem;
@@ -64,7 +60,6 @@ h1.h2 {
     margin: 0;
 }
 
-/* Admin dropdown */
 .dropdown-toggle {
     display: flex;
     align-items: center;
@@ -100,7 +95,6 @@ h1.h2 {
     color: #4299e1;
 }
 
-/* Alert messages */
 .alert {
     margin: 1rem 0;
     border: none;
@@ -125,7 +119,6 @@ h1.h2 {
     padding: 0.5rem;
 }
 
-/* Cards */
 .card {
     border: none;
     border-radius: 1rem;
@@ -164,7 +157,6 @@ h1.h2 {
     color: #4a5568;
 }
 
-/* Buttons */
 .btn {
     padding: 0.5rem 1.25rem;
     border-radius: 0.5rem;
@@ -183,7 +175,6 @@ h1.h2 {
     transform: translateY(-1px);
 }
 
-/* Tables */
 .table {
     border-collapse: separate;
     border-spacing: 0;
@@ -209,7 +200,6 @@ h1.h2 {
     border-bottom: none;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     main {
         padding: 1.5rem 1rem;
@@ -226,7 +216,6 @@ h1.h2 {
     }
 }
 
-/* Animation */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
@@ -236,7 +225,6 @@ main > * {
     animation: fadeIn 0.3s ease-out forwards;
 }
 
-/* Style pour l'élément actif dans la sidebar */
 #sidebarMenu .nav-link.active {
     background-color: rgba(74, 108, 247, 0.15);
     color: #fff;
@@ -259,7 +247,6 @@ main > * {
     color: #4a6cf7;
 }
 
-/* Animation pour l'indicateur actif */
 #sidebarMenu .nav-link.active {
     animation: activePulse 2s infinite ease-in-out;
 }

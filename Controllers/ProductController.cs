@@ -15,7 +15,6 @@ namespace KevinfalsPhone.Controllers
 
         public async Task<IActionResult> Index(int? categoryId)
         {
-            // Vérifier si l'utilisateur est connecté
             if (string.IsNullOrEmpty(HttpContext.Session.GetString("UserId")))
             {
                 return RedirectToAction("Login", "Auth");
@@ -38,7 +37,6 @@ namespace KevinfalsPhone.Controllers
 
         public async Task<IActionResult> Details(int id)
         {
-            // Vérifier si l'utilisateur est connecté
             if (string.IsNullOrEmpty(HttpContext.Session.GetString("UserId")))
             {
                 return RedirectToAction("Login", "Auth");

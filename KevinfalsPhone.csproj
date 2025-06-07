@@ -9,7 +9,6 @@
   <ItemGroup>
     <PackageReference Include="iTextSharp.LGPLv2.Core" Version="3.7.4" />
     <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
-    <!-- Option 2: Rester sur EF Core 8.0 (si nécessaire) -->
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.11" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.11">
       <PrivateAssets>all</PrivateAssets>
@@ -19,11 +18,8 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <!-- Utiliser uniquement Pomelo.EntityFrameworkCore.MySql pour MySQL -->
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="8.0.2" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <!-- Supprimer la référence explicite à System.Text.Json et Microsoft.Extensions.Caching.Memory 
-         car ils sont inclus automatiquement avec les bonnes versions -->
   </ItemGroup>
 
 </Project>

@@ -16,7 +16,6 @@ namespace KevinfalsPhone.Controllers
         [HttpGet]
         public IActionResult Login()
         {
-            // Si déjà connecté, rediriger
             if (!string.IsNullOrEmpty(HttpContext.Session.GetString("UserId")))
             {
                 return RedirectToAction("Index", "Product");
@@ -33,13 +32,11 @@ namespace KevinfalsPhone.Controllers
                 
                 if (user != null)
                 {
-                    // Créer la session
                     HttpContext.Session.SetString("UserId", user.Id.ToString());
                     HttpContext.Session.SetString("UserName", user.Prenom + " " + user.Nom);
                     HttpContext.Session.SetString("UserRole", user.Role);
                     HttpContext.Session.SetString("UserEmail", user.Email);
 
-                    // Rediriger selon le rôle
                     if (user.Role == "Admin")
                     {
                         return RedirectToAction("Dashboard", "Admin");
@@ -60,7 +57,6 @@ namespace KevinfalsPhone.Controllers
         [HttpGet]
         public IActionResult Register()
         {
-            // Si déjà connecté, rediriger
             if (!string.IsNullOrEmpty(HttpContext.Session.GetString("UserId")))
             {
                 return RedirectToAction("Index", "Product");

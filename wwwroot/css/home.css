@@ -1,18 +1,15 @@
-/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #f2f6ff;
     color: #333;
 }
 
-/* Hero section */
 .hero {
     height: 100vh;
     background: linear-gradient(to right, #003c8f, #007bff);
@@ -42,7 +39,6 @@ body {
     margin-bottom: 40px;
 }
 
-/* Buttons */
 .buttons {
     display: flex;
     justify-content: center;

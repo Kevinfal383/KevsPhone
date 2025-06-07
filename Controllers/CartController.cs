@@ -16,7 +16,6 @@ namespace KevinfalsPhone.Controllers
 
         public IActionResult Index()
         {
-            // Vérifier si l'utilisateur est connecté
             if (string.IsNullOrEmpty(HttpContext.Session.GetString("UserId")))
             {
                 return RedirectToAction("Login", "Auth");
@@ -29,7 +28,6 @@ namespace KevinfalsPhone.Controllers
         [HttpPost]
         public async Task<IActionResult> AddToCart(int productId, int quantity = 1)
         {
-            // Vérifier si l'utilisateur est connecté
             if (string.IsNullOrEmpty(HttpContext.Session.GetString("UserId")))
             {
                 return RedirectToAction("Login", "Auth");
@@ -64,7 +62,6 @@ namespace KevinfalsPhone.Controllers
             }
             else
             {
-                // Correction de l'avertissement CS8601
                 var categoryName = product.Category?.Nom ?? "Catégorie inconnue";
                 
                 cartItems.Add(new CartItem
