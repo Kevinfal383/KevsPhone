@@ -173,9 +173,9 @@ namespace KevinfalsPhone.Migrations
                         {
                             Id = 1,
                             CategoryId = 1,
-                            DateCreation = new DateTime(2025, 6, 7, 16, 27, 26, 936, DateTimeKind.Local).AddTicks(7937),
+                            DateCreation = new DateTime(2025, 6, 7, 22, 17, 33, 52, DateTimeKind.Local).AddTicks(7788),
                             Description = "Smartphone haut de gamme",
-                            Image = "huawei-p50.jpg",
+                            Image = "h1.jpg",
                             Nom = "Huawei P50 Pro",
                             Prix = 899.99m,
                             Stock = 10
@@ -184,78 +184,342 @@ namespace KevinfalsPhone.Migrations
                         {
                             Id = 2,
                             CategoryId = 1,
-                            DateCreation = new DateTime(2025, 6, 7, 16, 27, 26, 936, DateTimeKind.Local).AddTicks(7996),
-                            Description = "Tablette performante",
-                            Image = "huawei-matepad.jpg",
-                            Nom = "Huawei MatePad",
-                            Prix = 449.99m,
-                            Stock = 5
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CategoryId = 2,
-                            DateCreation = new DateTime(2025, 6, 7, 16, 27, 26, 936, DateTimeKind.Local).AddTicks(8003),
-                            Description = "Dernier flagship Samsung",
-                            Image = "samsung-s24.jpg",
-                            Nom = "Samsung Galaxy S24",
-                            Prix = 1099.99m,
+                            DateCreation = new DateTime(2025, 6, 7, 22, 17, 33, 52, DateTimeKind.Local).AddTicks(7806),
+                            Description = "Smartphone puissant et élégant",
+                            Image = "h2.jpg",
+                            Nom = "Huawei Mate 40 Pro",
+                            Prix = 799.99m,
                             Stock = 8
                         },
                         new
                         {
-                            Id = 4,
-                            CategoryId = 2,
-                            DateCreation = new DateTime(2025, 6, 7, 16, 27, 26, 936, DateTimeKind.Local).AddTicks(8009),
-                            Description = "Tablette premium",
-                            Image = "samsung-tabs9.jpg",
-                            Nom = "Samsung Galaxy Tab S9",
-                            Prix = 649.99m,
-                            Stock = 6
-                        },
-                        new
-                        {
-                            Id = 5,
-                            CategoryId = 3,
-                            DateCreation = new DateTime(2025, 6, 7, 16, 27, 26, 936, DateTimeKind.Local).AddTicks(8014),
-                            Description = "iPhone dernière génération",
-                            Image = "iphone15pro.jpg",
-                            Nom = "iPhone 15 Pro",
-                            Prix = 1299.99m,
+                            Id = 3,
+                            CategoryId = 1,
+                            DateCreation = new DateTime(2025, 6, 7, 22, 17, 33, 52, DateTimeKind.Local).AddTicks(7812),
+                            Description = "Excellent rapport qualité-prix",
+                            Image = "h3.jpg",
+                            Nom = "Huawei Nova 11",
+                            Prix = 499.99m,
                             Stock = 12
                         },
                         new
                         {
+                            Id = 4,
+                            CategoryId = 1,
+                            DateCreation = new DateTime(2025, 6, 7, 22, 17, 33, 52, DateTimeKind.Local).AddTicks(7819),
+                            Description = "Smartphone milieu de gamme",
+                            Image = "h4.jpg",
+                            Nom = "Huawei P40 Lite",
+                            Prix = 299.99m,
+                            Stock = 20
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CategoryId = 1,
+                            DateCreation = new DateTime(2025, 6, 7, 22, 17, 33, 52, DateTimeKind.Local).AddTicks(7825),
+                            Description = "Écran FullView et bonne autonomie",
+                            Image = "h5.jpg",
+                            Nom = "Huawei Y9a",
+                            Prix = 259.99m,
+                            Stock = 15
+                        },
+                        new
+                        {
                             Id = 6,
-                            CategoryId = 3,
-                            DateCreation = new DateTime(2025, 6, 7, 16, 27, 26, 936, DateTimeKind.Local).AddTicks(8022),
-                            Description = "Ordinateur portable léger",
-                            Image = "macbook-air.jpg",
-                            Nom = "MacBook Air M2",
-                            Prix = 1499.99m,
-                            Stock = 4
+                            CategoryId = 1,
+                            DateCreation = new DateTime(2025, 6, 7, 22, 17, 33, 52, DateTimeKind.Local).AddTicks(7830),
+                            Description = "Nouveauté avec caméra avancée",
+                            Image = "h6.jpg",
+                            Nom = "Huawei P60 Pro",
+                            Prix = 999.99m,
+                            Stock = 6
                         },
                         new
                         {
                             Id = 7,
-                            CategoryId = 4,
-                            DateCreation = new DateTime(2025, 6, 7, 16, 27, 26, 936, DateTimeKind.Local).AddTicks(8027),
-                            Description = "Smartphone Google avec IA",
-                            Image = "pixel8pro.jpg",
-                            Nom = "Google Pixel 8 Pro",
+                            CategoryId = 1,
+                            DateCreation = new DateTime(2025, 6, 7, 22, 17, 33, 52, DateTimeKind.Local).AddTicks(7836),
+                            Description = "Design moderne et performant",
+                            Image = "h7.jpg",
+                            Nom = "Huawei Nova 10 SE",
+                            Prix = 379.99m,
+                            Stock = 9
+                        },
+                        new
+                        {
+                            Id = 8,
+                            CategoryId = 1,
+                            DateCreation = new DateTime(2025, 6, 7, 22, 17, 33, 52, DateTimeKind.Local).AddTicks(7842),
+                            Description = "Flagship innovant",
+                            Image = "h8.jpg",
+                            Nom = "Huawei Mate 50",
+                            Prix = 1099.99m,
+                            Stock = 5
+                        },
+                        new
+                        {
+                            Id = 9,
+                            CategoryId = 2,
+                            DateCreation = new DateTime(2025, 6, 7, 22, 17, 33, 52, DateTimeKind.Local).AddTicks(7847),
+                            Description = "Smartphone haut de gamme",
+                            Image = "s1.jpg",
+                            Nom = "Samsung Galaxy S24 Ultra",
+                            Prix = 1399.99m,
+                            Stock = 10
+                        },
+                        new
+                        {
+                            Id = 10,
+                            CategoryId = 2,
+                            DateCreation = new DateTime(2025, 6, 7, 22, 17, 33, 52, DateTimeKind.Local).AddTicks(7853),
+                            Description = "Écran pliable",
+                            Image = "s2.webp",
+                            Nom = "Samsung Galaxy Z Fold5",
+                            Prix = 1799.99m,
+                            Stock = 3
+                        },
+                        new
+                        {
+                            Id = 11,
+                            CategoryId = 2,
+                            DateCreation = new DateTime(2025, 6, 7, 22, 17, 33, 52, DateTimeKind.Local).AddTicks(7858),
+                            Description = "Excellent en photo",
+                            Image = "s3.webp",
+                            Nom = "Samsung Galaxy S23",
                             Prix = 999.99m,
                             Stock = 7
                         },
                         new
                         {
-                            Id = 8,
-                            CategoryId = 4,
-                            DateCreation = new DateTime(2025, 6, 7, 16, 27, 26, 936, DateTimeKind.Local).AddTicks(8033),
-                            Description = "Écouteurs sans fil",
-                            Image = "pixel-buds.jpg",
-                            Nom = "Google Pixel Buds",
+                            Id = 12,
+                            CategoryId = 2,
+                            DateCreation = new DateTime(2025, 6, 7, 22, 17, 33, 52, DateTimeKind.Local).AddTicks(7864),
+                            Description = "Milieu de gamme puissant",
+                            Image = "s4.jpg",
+                            Nom = "Samsung Galaxy A54",
+                            Prix = 449.99m,
+                            Stock = 14
+                        },
+                        new
+                        {
+                            Id = 13,
+                            CategoryId = 2,
+                            DateCreation = new DateTime(2025, 6, 7, 22, 17, 33, 52, DateTimeKind.Local).AddTicks(7870),
+                            Description = "Bonne autonomie",
+                            Image = "s5.jpg",
+                            Nom = "Samsung Galaxy M14",
                             Prix = 199.99m,
-                            Stock = 15
+                            Stock = 18
+                        },
+                        new
+                        {
+                            Id = 14,
+                            CategoryId = 2,
+                            DateCreation = new DateTime(2025, 6, 7, 22, 17, 33, 52, DateTimeKind.Local).AddTicks(7875),
+                            Description = "Design pliable compact",
+                            Image = "s6.jpg",
+                            Nom = "Samsung Galaxy Z Flip5",
+                            Prix = 1199.99m,
+                            Stock = 6
+                        },
+                        new
+                        {
+                            Id = 15,
+                            CategoryId = 2,
+                            DateCreation = new DateTime(2025, 6, 7, 22, 17, 33, 52, DateTimeKind.Local).AddTicks(7881),
+                            Description = "Stylet intégré",
+                            Image = "s7.jpg",
+                            Nom = "Samsung Galaxy S22 Ultra",
+                            Prix = 1249.99m,
+                            Stock = 4
+                        },
+                        new
+                        {
+                            Id = 16,
+                            CategoryId = 2,
+                            DateCreation = new DateTime(2025, 6, 7, 22, 17, 33, 52, DateTimeKind.Local).AddTicks(7886),
+                            Description = "Productivité et performance",
+                            Image = "s8.webp",
+                            Nom = "Samsung Galaxy Note 20",
+                            Prix = 949.99m,
+                            Stock = 5
+                        },
+                        new
+                        {
+                            Id = 17,
+                            CategoryId = 3,
+                            DateCreation = new DateTime(2025, 6, 7, 22, 17, 33, 52, DateTimeKind.Local).AddTicks(7892),
+                            Description = "Dernier modèle haut de gamme",
+                            Image = "a1.webp",
+                            Nom = "iPhone 15 Pro Max",
+                            Prix = 1599.99m,
+                            Stock = 10
+                        },
+                        new
+                        {
+                            Id = 18,
+                            CategoryId = 3,
+                            DateCreation = new DateTime(2025, 6, 7, 22, 17, 33, 52, DateTimeKind.Local).AddTicks(7900),
+                            Description = "Modèle standard 2023",
+                            Image = "a2.jpeg",
+                            Nom = "iPhone 15",
+                            Prix = 1099.99m,
+                            Stock = 8
+                        },
+                        new
+                        {
+                            Id = 19,
+                            CategoryId = 3,
+                            DateCreation = new DateTime(2025, 6, 7, 22, 17, 33, 52, DateTimeKind.Local).AddTicks(7905),
+                            Description = "Technologie avancée",
+                            Image = "a3.jpg",
+                            Nom = "iPhone 14 Pro",
+                            Prix = 1299.99m,
+                            Stock = 6
+                        },
+                        new
+                        {
+                            Id = 20,
+                            CategoryId = 3,
+                            DateCreation = new DateTime(2025, 6, 7, 22, 17, 33, 52, DateTimeKind.Local).AddTicks(7911),
+                            Description = "Performance et autonomie",
+                            Image = "a4.jpeg",
+                            Nom = "iPhone 13",
+                            Prix = 899.99m,
+                            Stock = 10
+                        },
+                        new
+                        {
+                            Id = 21,
+                            CategoryId = 3,
+                            DateCreation = new DateTime(2025, 6, 7, 22, 17, 33, 52, DateTimeKind.Local).AddTicks(7916),
+                            Description = "Compact et rapide",
+                            Image = "a5.webp",
+                            Nom = "iPhone SE (2022)",
+                            Prix = 479.99m,
+                            Stock = 12
+                        },
+                        new
+                        {
+                            Id = 22,
+                            CategoryId = 3,
+                            DateCreation = new DateTime(2025, 6, 7, 22, 17, 33, 52, DateTimeKind.Local).AddTicks(7922),
+                            Description = "Bon rapport qualité/prix",
+                            Image = "a6.webp",
+                            Nom = "iPhone 12",
+                            Prix = 749.99m,
+                            Stock = 9
+                        },
+                        new
+                        {
+                            Id = 23,
+                            CategoryId = 3,
+                            DateCreation = new DateTime(2025, 6, 7, 22, 17, 33, 52, DateTimeKind.Local).AddTicks(7927),
+                            Description = "Encore performant",
+                            Image = "a7.jpg",
+                            Nom = "iPhone 11",
+                            Prix = 599.99m,
+                            Stock = 11
+                        },
+                        new
+                        {
+                            Id = 24,
+                            CategoryId = 3,
+                            DateCreation = new DateTime(2025, 6, 7, 22, 17, 33, 52, DateTimeKind.Local).AddTicks(7933),
+                            Description = "Coloré et accessible",
+                            Image = "a8.webp",
+                            Nom = "iPhone XR",
+                            Prix = 399.99m,
+                            Stock = 7
+                        },
+                        new
+                        {
+                            Id = 25,
+                            CategoryId = 4,
+                            DateCreation = new DateTime(2025, 6, 7, 22, 17, 33, 52, DateTimeKind.Local).AddTicks(7938),
+                            Description = "IA intégrée et caméra top",
+                            Image = "g1.png",
+                            Nom = "Google Pixel 8 Pro",
+                            Prix = 1099.99m,
+                            Stock = 7
+                        },
+                        new
+                        {
+                            Id = 26,
+                            CategoryId = 4,
+                            DateCreation = new DateTime(2025, 6, 7, 22, 17, 33, 52, DateTimeKind.Local).AddTicks(7944),
+                            Description = "Version compacte",
+                            Image = "g2.webp",
+                            Nom = "Google Pixel 8",
+                            Prix = 799.99m,
+                            Stock = 10
+                        },
+                        new
+                        {
+                            Id = 27,
+                            CategoryId = 4,
+                            DateCreation = new DateTime(2025, 6, 7, 22, 17, 33, 52, DateTimeKind.Local).AddTicks(7949),
+                            Description = "Caméra exceptionnelle",
+                            Image = "g3.webp",
+                            Nom = "Google Pixel 7 Pro",
+                            Prix = 899.99m,
+                            Stock = 6
+                        },
+                        new
+                        {
+                            Id = 28,
+                            CategoryId = 4,
+                            DateCreation = new DateTime(2025, 6, 7, 22, 17, 33, 52, DateTimeKind.Local).AddTicks(7954),
+                            Description = "Bon prix et performances",
+                            Image = "g4.webp",
+                            Nom = "Google Pixel 7a",
+                            Prix = 499.99m,
+                            Stock = 12
+                        },
+                        new
+                        {
+                            Id = 29,
+                            CategoryId = 4,
+                            DateCreation = new DateTime(2025, 6, 7, 22, 17, 33, 52, DateTimeKind.Local).AddTicks(7960),
+                            Description = "Excellent appareil photo",
+                            Image = "g5.webp",
+                            Nom = "Google Pixel 6 Pro",
+                            Prix = 799.99m,
+                            Stock = 8
+                        },
+                        new
+                        {
+                            Id = 30,
+                            CategoryId = 4,
+                            DateCreation = new DateTime(2025, 6, 7, 22, 17, 33, 52, DateTimeKind.Local).AddTicks(7965),
+                            Description = "Petit prix, grande valeur",
+                            Image = "g6.png",
+                            Nom = "Google Pixel 6a",
+                            Prix = 399.99m,
+                            Stock = 13
+                        },
+                        new
+                        {
+                            Id = 31,
+                            CategoryId = 4,
+                            DateCreation = new DateTime(2025, 6, 7, 22, 17, 33, 52, DateTimeKind.Local).AddTicks(7970),
+                            Description = "Bonne autonomie",
+                            Image = "g7.jpg",
+                            Nom = "Google Pixel 5",
+                            Prix = 349.99m,
+                            Stock = 10
+                        },
+                        new
+                        {
+                            Id = 32,
+                            CategoryId = 4,
+                            DateCreation = new DateTime(2025, 6, 7, 22, 17, 33, 52, DateTimeKind.Local).AddTicks(7977),
+                            Description = "Compact et fluide",
+                            Image = "g8.jpg",
+                            Nom = "Google Pixel 4a",
+                            Prix = 299.99m,
+                            Stock = 14
                         });
                 });
 
@@ -311,6 +575,21 @@ namespace KevinfalsPhone.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            DateCreation = new DateTime(2025, 6, 7, 22, 17, 33, 52, DateTimeKind.Local).AddTicks(7426),
+                            DateNaissance = new DateTime(1990, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "admin@gmail.com",
+                            MotDePasse = "$2a$11$2ZQJNv3UuV7QeD5VYsQZP.HRlz7Lk9JZ8bW6f3Jd1TkO9X2vY1WXK",
+                            Nom = "Admin",
+                            Pays = "Madagasikara",
+                            Prenom = "Admin",
+                            Role = "Admin",
+                            Ville = "Antananarivo"
+                        });
                 });
 
             modelBuilder.Entity("KevinfalsPhone.Models.Order", b =>

@@ -176,3 +176,5 @@
 /home/kevinfal/PROJETS/Dotnet/KevinfalsPhone/obj/Debug/net9.0/compressed/bduivpne4n-a8qprwlxyk.gz
 /home/kevinfal/PROJETS/Dotnet/KevinfalsPhone/obj/Debug/net9.0/compressed/yphbt082jp-39pkaja062.gz
 /home/kevinfal/PROJETS/Dotnet/KevinfalsPhone/obj/Debug/net9.0/compressed/2t79mfcdl5-wbzus48pmk.gz
+/home/kevinfal/PROJETS/Dotnet/KevinfalsPhone/obj/Debug/net9.0/compressed/g31ics0uhd-y2pi2el5v4.gz
+/home/kevinfal/PROJETS/Dotnet/KevinfalsPhone/obj/Debug/net9.0/compressed/20ngxd4xq9-nshm0kugnx.gz

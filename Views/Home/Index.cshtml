@@ -2,21 +2,31 @@
     ViewData["Title"] = "Accueil";
 }
 
-<div class="container my-5">
-    <!-- Hero Section -->
-    <div class="row align-items-center mb-5">
-        <div class="col-md-6">
-            <h1 class="display-4 fw-bold mb-3">Bienvenue chez MobileShop</h1>
-            <p class="lead mb-4">Découvrez notre sélection premium de smartphones aux meilleurs prix du marché.</p>
-            <div class="d-grid gap-2 d-md-block">
-                <a asp-controller="Auth" asp-action="Login" class="btn btn-primary btn-lg me-2">Connexion</a>
-                <a asp-controller="Auth" asp-action="Register" class="btn btn-outline-secondary btn-lg">Inscription</a>
+<div class="container-fluid min-vh-100 d-flex align-items-center px-0">
+    <div class="row align-items-center g-0 w-100">
+        <div class="col-lg-6 p-lg-5 p-4 order-lg-1 order-last">
+            <h1 class="display-3 display-md-2 display-sm-1 fw-bold mb-lg-4 mb-3 text-lg-start text-center">Bienvenue chez Kev's Phone</h1>
+            <p class="lead fs-4 fs-sm-3 mb-lg-4 mb-3 text-lg-start text-center">Découvrez notre sélection premium de smartphones aux meilleurs prix du marché.</p>
+            <div class="d-flex flex-lg-row flex-column gap-3 gap-sm-2">
+                <a asp-controller="Auth" asp-action="Login" class="btn btn-primary btn-lg px-4 py-2 w-lg-auto w-100">Connexion</a>
+                <a asp-controller="Auth" asp-action="Register" class="btn btn-outline-primary btn-lg px-4 py-2 w-lg-auto w-100">Inscription</a>
             </div>
         </div>
-        <div class="col-md-6 mt-4 mt-md-0">
-            <img src="~/images/accueil.png" 
+        
+        <div class="col-lg-6 min-vh-lg-100 vh-sm-50 vh-40 order-lg-2 order-first">
+            <img src="~/images/products/g3.webp" 
                  alt="Collection de smartphones" 
-                 class="img-fluid">
+                 class="img-fluid w-100 h-100 object-fit-cover">
         </div>
     </div>
 </div>
+
+<style>
+    body {
+        overflow-x: hidden;
+    }
+    .object-fit-cover {
+        object-fit: cover;
+        object-position: center;
+    }
+</style>
