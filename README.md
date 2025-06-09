@@ -1,9 +1,9 @@
 # Kev'sPhone - Plateforme e-commerce de vente de smartphones
 
 ## 📋 L'etudiant
-##FALISOA Kevin
-##L2 GL INSI
-##LA/61/24-25
+## FALISOA Kevin
+## L2 GL INSI
+## LA/61/24-25
 
 ## 📝 Description
 Kev'sPhone est une application web de commerce électronique spécialisée dans la vente de smartphones. Cette plateforme permet aux utilisateurs de découvrir, comparer et acheter les derniers modèles de téléphones.
